@@ -25,7 +25,7 @@
   <div class="container">
 
     <!-- Jumbotron -->
-    <div class="jumbotron bg-danger">
+    <div class="jumbotron bg-danger text-light">
       <h1 class="text-center">TRAIN TIME!</h1>
       <h3 class="text-center">There is only adventure</h3>
     </div>
@@ -68,22 +68,23 @@
         <form>
             <div class="form-group row">
             <label for="train-input">Train Name</label>
-            <input class="form-control" id="train-input" placeholder="Thomas" type="text">
+            <input class="form-control" id="train-input"  type="text" required>
             </div>
             <div class="form-group row">
-            <label for="destination-input">Role</label>
-            <input class="form-control" id="destination-input" placeholder="Tokyo, Japan" type="text">
+            <label for="destination-input">Destination</label>
+            <input class="form-control" id="destination-input"  type="text" required>
             </div>
             <div class="form-group row">
             <label for="time-input">First Train Time (HH:mm - military time)</label>
-            <input class="form-control" id="time-input" placeholder="13:01" type="text">
+            <input class="form-control" id="time-input"  type="text" required pattern="[1-2][0-9][:][1-5][0-9]">
             </div>
             <div class="form-group row">
             <label for="freq-input">Frequency (min)</label>
-            <input class="form-control" id="freq-input" placeholder="30" type="text">
+            <input class="form-control" id="freq-input"  type="text" required>
             </div>
-            <button class="btn btn-danger float-right" id="sub-train-btn">Submit</button>
+            <button class="btn btn-danger float-right" id="sub-train-btn" type="submit" >Submit</button>
         </form>
+        <button class="btn btn-secondary float-right" id="clear-train-btn">Clear Table</button>
         </div>
     </div>
     </div>

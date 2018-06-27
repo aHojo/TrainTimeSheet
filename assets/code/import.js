@@ -16,4 +16,18 @@
     this.trainDestination = destination;
     this.firstTrain = firstTrain;
     this.trainFrequency = frequency;
+
+    if(typeof(name) === undefined){
+      this.name = "";
+    }
+    if(typeof(destination) === undefined){
+      this.trainDestination = "";
+    }
+
+    if(typeof(firstTrain) === undefined){
+      this.firstTrain = "";
+    }
+    if(typeof(frequency) === undefined){
+      this.trainFrequency = "";
+    }
 }
