@@ -75,14 +75,22 @@ database.ref("/train").on('child_added', function (snapshot) {
     var tilNext = tillTrain;
 
     var tableRow = $("<tr>").append(
-        $("<td>").attr("scope", "row").text(name),
-        $("<td>").attr("scope", "col").text(dest),
-        $("<td>").attr("scope", "col").text(frequen),
-        $("<td>").attr("scope", "col").text(nextTime),
-        $("<td>").attr("scope", "col").text(tilNext + " minutes")
+        $("<td>").attr({
+            class: 'tabDat',
+            id: "name"}).text(name),
+        $("<td>").attr({
+            class: 'tabDat',
+            id: "destination"}).text(dest),
+        $("<td>").attr({
+            class: 'tabDat',
+            id: "freq"}).text(frequen),
+        $("<td>").text(nextTime),
+        $("<td>").text(tilNext + " minutes")
     );
 
     $('#train-table > tbody').append(tableRow);
 
 
 })
+
+
